@@ -1,3 +1,56 @@
+/* === Visual Consistency & Branding === */
+.intel-logo-top {
+  width: 100%;
+  text-align: center;
+  margin-top: 18px;
+}
+.intel-logo {
+  width: 120px;
+  min-width: 80px;
+  display: inline-block;
+}
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95em;
+  padding: 24px 0 16px 0;
+  letter-spacing: 0.5px;
+}
+/* === Timeline Card Image Formatting === */
+.glass-card img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(102, 126, 234, 0.12);
+  margin: 0 auto 12px auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .glass-card img {
+    max-width: 90vw;
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (max-width: 600px) {
+  .glass-card img {
+    max-width: 98vw;
+    aspect-ratio: 4/3;
+  }
+}
+/* === Swipe Hint Styling === */
+.swipe-hint {
+  font-family: 'Poppins', sans-serif;
+  color: #4169e1;
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
 /* === Horizontal Scroll Timeline Grid === */
 .grid-layout.horizontal-scroll {
   display: grid;
@@ -59,57 +112,6 @@
     padding: 8px 2px;
     font-size: 0.98em;
     margin-bottom: 10px;
-  }
-}
-/* === INTEL-THEMED BOOTSTRAP CARD SECTION === */
-section.container .card {
-  background: rgba(255,255,255,0.85);
-  border-radius: 16px;
-  box-shadow: 0 2px 16px #4169e122, 0 1.5px 8px #00c6fb11;
-  border: 1.5px solid #e3e8f7;
-  transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
-}
-
-section.container .card:hover,
-section.container .card:focus-within {
-  box-shadow: 0 8px 32px #4169e155, 0 4px 24px #00c6fb33;
-  border: 2.5px solid #47f0ff;
-  transform: translateY(-6px) scale(1.03);
-  z-index: 2;
-}
-
-section.container .card-title {
-  color: #4169e1;
-  font-weight: 700;
-  font-size: 1.35em;
-  letter-spacing: 1px;
-}
-
-section.container .btn-primary {
-  background: linear-gradient(90deg, #4169e1 0%, #00c6fb 100%);
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 24px;
-  padding: 10px 24px;
-  box-shadow: 0 2px 12px #4169e122;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-section.container .btn-primary:hover,
-section.container .btn-primary:focus {
-  background: linear-gradient(90deg, #00c6fb 0%, #4169e1 100%);
-  box-shadow: 0 8px 24px #00c6fb55;
-  outline: 2px solid #47f0ff;
-}
-
-@media (max-width: 900px) {
-  section.container .card {
-    border-radius: 12px;
-    margin-bottom: 16px;
-  }
-  section.container .card-title {
-    font-size: 1.15em;
   }
 }
 /* === INTEL-THEMED BOOTSTRAP CARD SECTION === */

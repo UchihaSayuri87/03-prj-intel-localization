@@ -7,13 +7,37 @@
   <link rel="stylesheet" href="style.css" />
   <!-- Add Bootstrap CSS (RTL version) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-+qdLa3e1Q0v1kQnQ4Q6hJty5KVphtPhzWj9WO1clHTMGaU6z5J6M1fQ4V2xF1p6V" crossorigin="anonymous">
+  <link rel="preload" href="img/intel-header-logo.svg" as="image">
 </head>
 <body>
+
+  <!-- Intel Logo at Top -->
+  <div class="intel-logo-top">
+    <img src="img/intel-header-logo.svg" alt="Intel Logo" class="intel-logo" />
+  </div>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle-bar">
+    <label for="lang-toggle" class="lang-label">Language:</label>
+    <select id="lang-toggle" aria-label="Select language" class="lang-select">
+  <option value="en" selected>English</option>
+  <option value="zh">中文</option>
+  <option value="hi">हिन्दी</option>
+  <option value="es">Español</option>
+  <option value="fr">Français</option>
+  <option value="ar">العربية</option>
+  <option value="bn">বাংলা</option>
+  <option value="ru">Русский</option>
+  <option value="pt">Português</option>
+  <option value="ur">اردو</option>
+  <option value="ja">日本語</option>
+    </select>
+  </div>
 
   <!-- ===== Header / Hero Section ===== -->
   <header>
     <div>
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <img src="img/intel-header-logo.svg" alt="Intel Logo" class="intel-logo" />
       <!-- Main Heading -->
       <h1>
         Sustainability Through the Ages
@@ -31,113 +55,134 @@
 
   <!-- ===== Timeline Cards Section ===== -->
   <section id="timeline-section" dir="auto">
-    <div class="grid-layout horizontal-scroll" id="timeline">
+    <div class="grid-layout horizontal-scroll" id="timeline" aria-label="Intel Sustainability Timeline" tabindex="0">
+      <div class="swipe-hint" style="text-align:center;color:#4169e1;font-size:1.1em;margin-bottom:12px;">
+        <span>⇆ Swipe or scroll to view timeline</span>
+      </div>
       <!-- Card 1: 1968 -->
       <div class="glass-card">
-        <h2>1968</h2>
+        <h2 tabindex="0">1968</h2>
+        <button class="card-expand" aria-label="Show more" tabindex="0">+</button>
         <h3>Intel Founded</h3>
-        <img src="img/1.jpg" alt="Placeholder Image" />
-        <p>
+        <img src="img/1.jpg" alt="Intel founders, 1968" loading="lazy" />
+        <p class="card-desc">
           Robert Noyce and Gordon Moore rename the newly formed company 
           NM Electronics to Intel Corporation, laying the foundation for 
           decades of technological innovation.
         </p>
+        <div class="card-details" aria-hidden="true">More details about this milestone...</div>
       </div>
 
       <!-- Card 2: 1971 -->
       <div class="glass-card">
-        <h2>1971</h2>
+        <h2 tabindex="0">1971</h2>
+        <button class="card-expand" aria-label="Show more" tabindex="0">+</button>
         <h3>First Microprocessor</h3>
-        <img src="img/2.jpg" alt="Placeholder Image" />
-        <p>
+        <img src="img/2.jpg" alt="Intel 4004 microprocessor, 1971" loading="lazy" />
+        <p class="card-desc">
           Intel debuts the 4004, the world's first commercial microprocessor, 
           igniting the microprocessor revolution and propelling the future 
           of computing devices.
         </p>
+        <div class="card-details" aria-hidden="true">More details about this milestone...</div>
       </div>
 
       <!-- Card 3: 1978 -->
       <div class="glass-card">
-        <h2>1978</h2>
+        <h2 tabindex="0">1978</h2>
+        <button class="card-expand" aria-label="Show more" tabindex="0">+</button>
         <h3>8086 Processor</h3>
-        <img src="img/3.jpg" alt="Placeholder Image" />
-        <p>
+        <img src="img/3.jpg" alt="Intel 8086 processor, 1978" loading="lazy" />
+        <p class="card-desc">
           Launch of the 8086 processor, establishing the x86 architecture 
           that drives countless PCs and servers in the modern era.
         </p>
+        <div class="card-details" aria-hidden="true">More details about this milestone...</div>
       </div>
 
       <!-- Card 4: 1985 -->
       <div class="glass-card">
-        <h2>1985</h2>
+        <h2 tabindex="0">1985</h2>
+        <button class="card-expand" aria-label="Show more" tabindex="0">+</button>
         <h3>386 Processor</h3>
-        <img src="img/4.jpg" alt="Placeholder Image" />
-        <p>
+        <img src="img/4.jpg" alt="Intel 386 processor, 1985" loading="lazy" />
+        <p class="card-desc">
           Intel introduces the 386 processor with 32-bit architecture, 
           ushering in a new era of performance and multitasking for 
           personal computers.
         </p>
+        <div class="card-details" aria-hidden="true">More details about this milestone...</div>
       </div>
 
       <!-- Card 5: 2006 -->
       <div class="glass-card">
-        <h2>2006</h2>
+        <h2 tabindex="0">2006</h2>
+        <button class="card-expand" aria-label="Show more" tabindex="0">+</button>
         <h3>Peak GHG Emissions</h3>
-        <img src="img/5 (2).jpg" alt="Intel factory emissions reduction efforts, 2006" />
-        <p>
+        <img src="img/5 (2).jpg" alt="Intel factory emissions reduction efforts, 2006" loading="lazy" />
+        <p class="card-desc">
           This year marks Intel's highest annual greenhouse gas emissions 
           for operations. Over subsequent years, Intel invests heavily in 
           chemical abatement, renewable energy, and energy-efficient 
           manufacturing to reverse this trend.
         </p>
+        <div class="card-details" aria-hidden="true">More details about this milestone...</div>
       </div>
 
       <!-- Card 6: 2020 -->
       <div class="glass-card">
-        <h2>2020</h2>
+        <h2 tabindex="0">2020</h2>
+        <button class="card-expand" aria-label="Show more" tabindex="0">+</button>
         <h3>RISE Strategy</h3>
-        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-        <p>
+        <img src="https://placehold.co/250x100" alt="Intel RISE strategy, 2020" loading="lazy" />
+        <p class="card-desc">
           Intel launches its RISE (Responsible, Inclusive, Sustainable, 
           Enabling) strategy and 2030 goals, aiming to drive industry-wide 
           progress on climate action, water stewardship, and waste reduction.
         </p>
+        <div class="card-details" aria-hidden="true">More details about this milestone...</div>
       </div>
 
       <!-- Card 7: 2022 -->
       <div class="glass-card">
-        <h2>2022</h2>
+        <h2 tabindex="0">2022</h2>
+        <button class="card-expand" aria-label="Show more" tabindex="0">+</button>
         <h3>Net-Zero By 2040</h3>
-        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-        <p>
+        <img src="https://placehold.co/250x100" alt="Intel net-zero announcement, 2022" loading="lazy" />
+        <p class="card-desc">
           Intel announces its commitment to achieve net-zero greenhouse 
           gas emissions (Scope 1 and 2) across its global operations 
           by 2040, building on years of environmental initiatives.
         </p>
+        <div class="card-details" aria-hidden="true">More details about this milestone...</div>
       </div>
 
       <!-- Card 8: 2023 -->
       <div class="glass-card">
-        <h2>2023</h2>
+        <h2 tabindex="0">2023</h2>
+        <button class="card-expand" aria-label="Show more" tabindex="0">+</button>
         <h3>Renewable Electricity</h3>
-        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-        <p>
+        <img src="https://placehold.co/250x100" alt="Intel renewable electricity, 2023" loading="lazy" />
+        <p class="card-desc">
           The company achieves 99% renewable electricity usage worldwide, 
           helping to drastically lower carbon emissions and driving progress 
           toward Intel's long-term sustainability goals.
         </p>
+        <div class="card-details" aria-hidden="true">More details about this milestone...</div>
       </div>
 
       <!-- Card 9: 2024 -->
       <div class="glass-card">
-        <h2>2024</h2>
+        <h2 tabindex="0">2024</h2>
+        <button class="card-expand" aria-label="Show more" tabindex="0">+</button>
         <h3>Sustainability Summit</h3>
-        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-        <p>
+        <img src="https://placehold.co/250x100" alt="Intel Sustainability Summit, 2024" loading="lazy" />
+        <p class="card-desc">
           Intel hosts its first Sustainability Summit, uniting suppliers, 
           government officials, and industry leaders to collaborate on 
           next-generation sustainable semiconductor manufacturing.
         </p>
+        <div class="card-details" aria-hidden="true">More details about this milestone...</div>
       </div>
     </div>
   </section>
@@ -194,8 +239,307 @@
   <!-- ===== Subscription Form Section ===== -->
   <section>
     <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
+    <form id="subscribe-form" style="max-width:400px;margin:0 auto;">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+      </div>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+      <div id="subscribe-success" style="display:none;color:#4169e1;font-weight:600;margin-top:12px;">Thank you for subscribing!</div>
+    </form>
+    <script>
+      document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('subscribe-success').style.display = 'block';
+        this.reset();
+      });
+    </script>
   </section>
   <!-- ===== End Subscription Form Section ===== -->
+  <footer>
+    &copy; 2025 Intel Sustainability Timeline | Student Project
+  </footer>
 </body>
+<script>
+// Language toggle logic with real translations for top 10 languages
+const langToggle = document.getElementById('lang-toggle');
+const translations = {
+  en: {
+    header: 'Sustainability Through the Ages',
+    sub: "Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.",
+    subscribe: 'Subscribe to our Newsletter',
+    email: 'Email address',
+    success: 'Thank you for subscribing!',
+    error: 'Please enter a valid email address.',
+    loading: 'Subscribing...'
+  },
+  zh: {
+    header: '可持续发展历程',
+    sub: '探索英特尔的历史，了解我们对创新的承诺如何塑造了技术和地球的可持续未来。',
+    subscribe: '订阅我们的新闻通讯',
+    email: '电子邮件地址',
+    success: '感谢您的订阅！',
+    error: '请输入有效的电子邮件地址。',
+    loading: '正在订阅...'
+  },
+  hi: {
+    header: 'युगों के माध्यम से स्थिरता',
+    sub: 'इंटेल की यात्रा का अन्वेषण करें, यह जानें कि नवाचार के प्रति हमारी प्रतिबद्धता ने तकनीक और हमारे ग्रह के लिए अधिक स्थायी भविष्य कैसे आकार दिया।',
+    subscribe: 'हमारे न्यूज़लेटर की सदस्यता लें',
+    email: 'ईमेल पता',
+    success: 'सदस्यता के लिए धन्यवाद!',
+    error: 'कृपया एक मान्य ईमेल पता दर्ज करें।',
+    loading: 'सदस्यता ली जा रही है...'
+  },
+  es: {
+    header: 'Sostenibilidad a través de los tiempos',
+    sub: 'Explora el viaje de Intel a través del tiempo y descubre cómo nuestro compromiso con la innovación ha dado forma a un futuro más sostenible para la tecnología y nuestro planeta.',
+    subscribe: 'Suscríbete a nuestro boletín',
+    email: 'Correo electrónico',
+    success: '¡Gracias por suscribirte!',
+    error: 'Por favor, introduce una dirección de correo electrónico válida.',
+    loading: 'Suscribiendo...'
+  },
+  fr: {
+    header: 'La durabilité à travers les âges',
+    sub: "Découvrez le parcours d'Intel à travers le temps et comment notre engagement envers l'innovation a façonné un avenir plus durable pour la technologie et notre planète.",
+    subscribe: 'Abonnez-vous à notre newsletter',
+    email: 'Adresse e-mail',
+    success: 'Merci pour votre abonnement !',
+    error: "Veuillez entrer une adresse e-mail valide.",
+    loading: 'Abonnement en cours...'
+  },
+  ar: {
+    header: 'الاستدامة عبر العصور',
+    sub: 'اكتشف رحلة إنتل عبر الزمن، وكيف شكل التزامنا بالابتكار مستقبلًا أكثر استدامة للتكنولوجيا وكوكبنا.',
+    subscribe: 'اشترك في النشرة الإخبارية',
+    email: 'البريد الإلكتروني',
+    success: 'شكرًا لاشتراكك!',
+    error: 'يرجى إدخال بريد إلكتروني صالح.',
+    loading: 'جارٍ الاشتراك...'
+  },
+  bn: {
+    header: 'যুগের পর যুগ ধরে স্থায়িত্ব',
+    sub: 'ইন্টেলের যাত্রা আবিষ্কার করুন, আমাদের উদ্ভাবনের প্রতিশ্রুতি কীভাবে প্রযুক্তি এবং আমাদের গ্রহের জন্য আরও টেকসই ভবিষ্যত গড়ে তুলেছে।',
+    subscribe: 'আমাদের নিউজলেটার সাবস্ক্রাইব করুন',
+    email: 'ইমেইল ঠিকানা',
+    success: 'সাবস্ক্রাইব করার জন্য ধন্যবাদ!',
+    error: 'অনুগ্রহ করে একটি বৈধ ইমেইল ঠিকানা লিখুন।',
+    loading: 'সাবস্ক্রাইব করা হচ্ছে...'
+  },
+  ru: {
+    header: 'Устойчивое развитие сквозь века',
+    sub: 'Познакомьтесь с историей Intel и узнайте, как наша приверженность инновациям формирует более устойчивое будущее для технологий и планеты.',
+    subscribe: 'Подпишитесь на нашу рассылку',
+    email: 'Электронная почта',
+    success: 'Спасибо за подписку!',
+    error: 'Пожалуйста, введите действительный адрес электронной почты.',
+    loading: 'Подписка...'
+  },
+  pt: {
+    header: 'Sustentabilidade ao longo dos tempos',
+    sub: 'Explore a jornada da Intel ao longo do tempo e descubra como nosso compromisso com a inovação moldou um futuro mais sustentável para a tecnologia e nosso planeta.',
+    subscribe: 'Inscreva-se na nossa newsletter',
+    email: 'Endereço de e-mail',
+    success: 'Obrigado por se inscrever!',
+    error: 'Por favor, insira um endereço de e-mail válido.',
+    loading: 'Inscrevendo...'
+  },
+  ur: {
+    header: 'زمانوں کے ساتھ پائیداری',
+    sub: 'انٹیل کے سفر کو دریافت کریں، اور دیکھیں کہ جدت کے لیے ہمارا عزم کس طرح ٹیکنالوجی اور ہمارے سیارے کے لیے زیادہ پائیدار مستقبل تشکیل دیتا ہے۔',
+    subscribe: 'ہمارے نیوز لیٹر کو سبسکرائب کریں',
+    email: 'ای میل ایڈریس',
+    success: 'سبسکرائب کرنے کا شکریہ!',
+    error: 'براہ کرم درست ای میل ایڈریس درج کریں۔',
+    loading: 'سبسکرائب کیا جا رہا ہے...'
+  },
+  ja: {
+    header: '時代を超えた持続可能性',
+    sub: 'インテルの歴史をたどり、革新への取り組みがテクノロジーと地球の持続可能な未来をどのように形作ってきたかをご覧ください。',
+    subscribe: 'ニュースレターに登録する',
+    email: 'メールアドレス',
+    success: 'ご登録ありがとうございます！',
+    error: '有効なメールアドレスを入力してください。',
+    loading: '登録中...'
+  }
+};
+// Timeline, 3-column, and button translations
+const cardTranslations = {
+  en: [
+    {
+      year: '1968',
+      title: 'Intel Founded',
+      desc: 'Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.'
+    },
+    {
+      year: '1971',
+      title: 'First Microprocessor',
+      desc: 'Intel debuts the 4004, the world\'s first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.'
+    },
+    {
+      year: '1978',
+      title: '8086 Processor',
+      desc: 'Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.'
+    },
+    {
+      year: '1985',
+      title: '386 Processor',
+      desc: 'Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.'
+    },
+    {
+      year: '2006',
+      title: 'Peak GHG Emissions',
+      desc: "This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend."
+    },
+    {
+      year: '2020',
+      title: 'RISE Strategy',
+      desc: 'Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.'
+    },
+    {
+      year: '2022',
+      title: 'Net-Zero By 2040',
+      desc: 'Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.'
+    },
+    {
+      year: '2023',
+      title: 'Renewable Electricity',
+      desc: "The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals."
+    },
+    {
+      year: '2024',
+      title: 'Sustainability Summit',
+      desc: "Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing."
+    }
+  ],
+  ja: [
+    {
+      year: '1968',
+      title: 'インテル創業',
+      desc: 'ロバート・ノイスとゴードン・ムーアが新会社NMエレクトロニクスをインテル株式会社に改名し、数十年にわたる技術革新の礎を築きました。'
+    },
+    {
+      year: '1971',
+      title: '初のマイクロプロセッサ',
+      desc: 'インテルは世界初の商用マイクロプロセッサ「4004」を発表し、マイクロプロセッサ革命を起こし、コンピュータの未来を切り開きました。'
+    },
+    {
+      year: '1978',
+      title: '8086プロセッサ',
+      desc: '8086プロセッサの登場により、現代のPCやサーバーを支えるx86アーキテクチャが確立されました。'
+    },
+    {
+      year: '1985',
+      title: '386プロセッサ',
+      desc: 'インテルは32ビットアーキテクチャの386プロセッサを導入し、パーソナルコンピュータの性能とマルチタスクの新時代を切り開きました。'
+    },
+    {
+      year: '2006',
+      title: '温室効果ガス排出量のピーク',
+      desc: 'この年、インテルの事業における年間温室効果ガス排出量が最大となりました。その後、化学物質の除去、再生可能エネルギー、エネルギー効率の高い製造への投資を強化し、排出量削減に取り組みました。'
+    },
+    {
+      year: '2020',
+      title: 'RISE戦略',
+      desc: 'インテルはRISE（責任、包摂、持続可能性、促進）戦略と2030年目標を発表し、気候変動対策、水資源管理、廃棄物削減に業界全体で取り組むことを目指しています。'
+    },
+    {
+      year: '2022',
+      title: '2040年までにネットゼロ',
+      desc: 'インテルは2040年までにグローバル事業全体で温室効果ガス排出量（Scope 1および2）のネットゼロ達成を目指すことを発表し、長年の環境イニシアチブをさらに推進します。'
+    },
+    {
+      year: '2023',
+      title: '再生可能電力の達成',
+      desc: 'インテルは世界中で99%の再生可能電力使用を達成し、炭素排出量の大幅削減と長期的な持続可能性目標の推進に貢献しています。'
+    },
+    {
+      year: '2024',
+      title: 'サステナビリティ・サミット',
+      desc: 'インテルは初のサステナビリティ・サミットを開催し、サプライヤー、政府関係者、業界リーダーが次世代の持続可能な半導体製造に向けて協力しました。'
+    }
+  ]
+};
+const columnTranslations = {
+  en: [
+    {
+      title: 'RISE Strategy',
+      text: 'Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, Intel sets ambitious 2030 goals, including driving industry-wide progress on climate action, water stewardship, and waste reduction.'
+    },
+    {
+      title: 'Commitment',
+      text: 'In 2022, Intel pledged to achieve net-zero greenhouse gas emissions (Scope 1 and 2) by 2040. This commitment builds on decades of environmental initiatives and partnerships across the semiconductor industry.'
+    },
+    {
+      title: 'Water & Waste',
+      text: 'Intel conserves billions of gallons of water annually and collaborates with local communities to restore watersheds. Intel also upcycles and recycles materials to reduce waste and advance a circular economy.'
+    }
+  ],
+  ja: [
+    {
+      title: 'RISE戦略',
+      text: 'RISE（責任、包摂、持続可能性、促進）戦略のもと、インテルは2030年までの野心的な目標を掲げ、気候変動対策、水資源管理、廃棄物削減に業界全体で取り組んでいます。'
+    },
+    {
+      title: 'コミットメント',
+      text: '2022年、インテルは2040年までに温室効果ガス排出量（Scope 1および2）のネットゼロ達成を誓いました。このコミットメントは、半導体業界全体の環境イニシアチブとパートナーシップの上に築かれています。'
+    },
+    {
+      title: '水と廃棄物',
+      text: 'インテルは毎年数十億ガロンの水を節約し、地域社会と協力して流域の回復に取り組んでいます。また、廃棄物削減と循環型経済の推進のため、材料のアップサイクルとリサイクルも行っています。'
+    }
+  ]
+};
+const buttonTranslations = {
+  en: 'Learn More',
+  ja: '詳細はこちら'
+};
+function updateAllContent(lang) {
+  // RTL for Arabic and Urdu
+  document.body.setAttribute('dir', (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr');
+  document.querySelector('header h1').textContent = translations[lang].header;
+  document.querySelector('header p').textContent = translations[lang].sub;
+  document.querySelector('section[role="region"] h2').textContent = translations[lang].subscribe;
+  document.querySelector('.form-label').textContent = translations[lang].email;
+  document.getElementById('subscribe-success').textContent = translations[lang].success;
+  document.getElementById('subscribe-error').textContent = translations[lang].error;
+  document.getElementById('subscribe-loading').textContent = translations[lang].loading;
+  // Timeline cards
+  const cards = document.querySelectorAll('#timeline .glass-card');
+  if (cardTranslations[lang]) {
+    cards.forEach((card, i) => {
+      card.querySelector('h2').textContent = cardTranslations[lang][i].year;
+      card.querySelector('h3').textContent = cardTranslations[lang][i].title;
+      card.querySelector('.card-desc').textContent = cardTranslations[lang][i].desc;
+    });
+  }
+  // 3-column section
+  const cols = document.querySelectorAll('.container .card');
+  if (columnTranslations[lang]) {
+    cols.forEach((col, i) => {
+      col.querySelector('.card-title').textContent = columnTranslations[lang][i].title;
+      col.querySelector('.card-text').textContent = columnTranslations[lang][i].text;
+      col.querySelector('.btn').textContent = buttonTranslations[lang] || buttonTranslations['en'];
+    });
+  }
+}
+langToggle.addEventListener('change', function() {
+  updateAllContent(this.value);
+});
+// Initial content update for default language
+updateAllContent(langToggle.value);
+langToggle.addEventListener('change', function() {
+  const lang = this.value;
+  // RTL for Arabic and Urdu
+  document.body.setAttribute('dir', (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr');
+  document.querySelector('header h1').textContent = translations[lang].header;
+  document.querySelector('header p').textContent = translations[lang].sub;
+  document.querySelector('section[role="region"] h2').textContent = translations[lang].subscribe;
+  document.querySelector('.form-label').textContent = translations[lang].email;
+  document.getElementById('subscribe-success').textContent = translations[lang].success;
+  document.getElementById('subscribe-error').textContent = translations[lang].error;
+  document.getElementById('subscribe-loading').textContent = translations[lang].loading;
+});
+</script>
 </html>
