@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Add Bootstrap CSS (RTL version) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-+qdLa3e1Q0v1kQnQ4Q6hJty5KVphtPhzWj9WO1clHTMGaU6z5J6M1fQ4V2xF1p6V" crossorigin="anonymous">
 </head>
 <body>
 
-  <!-- Header / Hero Section -->
+  <!-- ===== Header / Hero Section ===== -->
   <header>
     <div>
       <img src="img/intel-header-logo.svg" alt="Intel Logo" />
@@ -25,167 +27,175 @@
       </p>
     </div>
   </header>
+  <!-- ===== End Header / Hero Section ===== -->
 
-  <!-- Timeline Cards Section -->
-  <section>
-    <!-- Card 1: 1968 -->
-    <div>
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Placeholder Image" />
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
-        decades of technological innovation.
-      </p>
-    </div>
-
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
-    </div>
-
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
-    </div>
-
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
-    </div>
-
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-    </div>
-
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-    </div>
-
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-    </div>
-
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-    </div>
-
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
-    </div>
-  </section>
-
-  <!-- 3-Column Content Section -->
-  <section>
-    <div>
-      
-      <!-- Column 1 -->
-      <div>
-        <h2>RISE Strategy</h2>
+  <!-- ===== Timeline Cards Section ===== -->
+  <section id="timeline-section" dir="auto">
+    <div class="grid-layout horizontal-scroll" id="timeline">
+      <!-- Card 1: 1968 -->
+      <div class="glass-card">
+        <h2>1968</h2>
+        <h3>Intel Founded</h3>
+        <img src="img/1.jpg" alt="Placeholder Image" />
         <p>
-          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
-          Intel sets ambitious 2030 goals, including driving industry-wide 
+          Robert Noyce and Gordon Moore rename the newly formed company 
+          NM Electronics to Intel Corporation, laying the foundation for 
+          decades of technological innovation.
+        </p>
+      </div>
+
+      <!-- Card 2: 1971 -->
+      <div class="glass-card">
+        <h2>1971</h2>
+        <h3>First Microprocessor</h3>
+        <img src="img/2.jpg" alt="Placeholder Image" />
+        <p>
+          Intel debuts the 4004, the world's first commercial microprocessor, 
+          igniting the microprocessor revolution and propelling the future 
+          of computing devices.
+        </p>
+      </div>
+
+      <!-- Card 3: 1978 -->
+      <div class="glass-card">
+        <h2>1978</h2>
+        <h3>8086 Processor</h3>
+        <img src="img/3.jpg" alt="Placeholder Image" />
+        <p>
+          Launch of the 8086 processor, establishing the x86 architecture 
+          that drives countless PCs and servers in the modern era.
+        </p>
+      </div>
+
+      <!-- Card 4: 1985 -->
+      <div class="glass-card">
+        <h2>1985</h2>
+        <h3>386 Processor</h3>
+        <img src="img/4.jpg" alt="Placeholder Image" />
+        <p>
+          Intel introduces the 386 processor with 32-bit architecture, 
+          ushering in a new era of performance and multitasking for 
+          personal computers.
+        </p>
+      </div>
+
+      <!-- Card 5: 2006 -->
+      <div class="glass-card">
+        <h2>2006</h2>
+        <h3>Peak GHG Emissions</h3>
+        <img src="img/5 (2).jpg" alt="Intel factory emissions reduction efforts, 2006" />
+        <p>
+          This year marks Intel's highest annual greenhouse gas emissions 
+          for operations. Over subsequent years, Intel invests heavily in 
+          chemical abatement, renewable energy, and energy-efficient 
+          manufacturing to reverse this trend.
+        </p>
+      </div>
+
+      <!-- Card 6: 2020 -->
+      <div class="glass-card">
+        <h2>2020</h2>
+        <h3>RISE Strategy</h3>
+        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+        <p>
+          Intel launches its RISE (Responsible, Inclusive, Sustainable, 
+          Enabling) strategy and 2030 goals, aiming to drive industry-wide 
           progress on climate action, water stewardship, and waste reduction.
         </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
       </div>
 
-      <!-- Column 2 -->
-      <div>
-        <h2>Commitment</h2>
+      <!-- Card 7: 2022 -->
+      <div class="glass-card">
+        <h2>2022</h2>
+        <h3>Net-Zero By 2040</h3>
+        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
         <p>
-          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-          (Scope 1 and 2) by 2040. This commitment builds on decades of 
-          environmental initiatives and partnerships across the semiconductor 
-          industry.
+          Intel announces its commitment to achieve net-zero greenhouse 
+          gas emissions (Scope 1 and 2) across its global operations 
+          by 2040, building on years of environmental initiatives.
         </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
       </div>
 
-      <!-- Column 3 -->
-      <div>
-        <h2>Water &amp; Waste</h2>
+      <!-- Card 8: 2023 -->
+      <div class="glass-card">
+        <h2>2023</h2>
+        <h3>Renewable Electricity</h3>
+        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
         <p>
-          Intel conserves billions of gallons of water annually and 
-          collaborates with local communities to restore watersheds.
-          Intel also upcycles and recycles materials to reduce waste and 
-          advance a circular economy.
+          The company achieves 99% renewable electricity usage worldwide, 
+          helping to drastically lower carbon emissions and driving progress 
+          toward Intel's long-term sustainability goals.
         </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
       </div>
 
+      <!-- Card 9: 2024 -->
+      <div class="glass-card">
+        <h2>2024</h2>
+        <h3>Sustainability Summit</h3>
+        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+        <p>
+          Intel hosts its first Sustainability Summit, uniting suppliers, 
+          government officials, and industry leaders to collaborate on 
+          next-generation sustainable semiconductor manufacturing.
+        </p>
+      </div>
     </div>
   </section>
+  <!-- ===== End Timeline Cards Section ===== -->
 
-  <!-- Subscription Form -->
+  <!-- ===== Responsive 3-Column Section (Bootstrap Grid, RTL) ===== -->
+  <section class="container my-5" dir="rtl">
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">RISE Strategy</h2>
+            <p class="card-text">
+              Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+              Intel sets ambitious 2030 goals, including driving industry-wide 
+              progress on climate action, water stewardship, and waste reduction.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Commitment</h2>
+            <p class="card-text">
+              In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+              (Scope 1 and 2) by 2040. This commitment builds on decades of 
+              environmental initiatives and partnerships across the semiconductor 
+              industry.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Water &amp; Waste</h2>
+            <p class="card-text">
+              Intel conserves billions of gallons of water annually and 
+              collaborates with local communities to restore watersheds.
+              Intel also upcycles and recycles materials to reduce waste and 
+              advance a circular economy.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== End Responsive 3-Column Section ===== -->
+
+  <!-- ===== Subscription Form Section ===== -->
   <section>
     <h2>Subscribe to our Newsletter</h2>
     <!-- Add form here -->
   </section>
+  <!-- ===== End Subscription Form Section ===== -->
 </body>
 </html>
