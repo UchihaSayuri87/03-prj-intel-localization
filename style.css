@@ -447,6 +447,118 @@ form#subscribe-form .btn-primary:focus {
   }
 }
 
+/* Remove horizontal scrolling for timeline/cards grid and improve stacking on small screens */
+#timeline .row,
+section[aria-label="Intel Sustainability Timeline"] .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#timeline .row > .col,
+section[aria-label="Intel Sustainability Timeline"] .row > .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Responsive grid for 3x3 cards: stack on small screens, 2 columns on medium, 3 on large */
+section[aria-label="Intel Sustainability Timeline"] .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 0;
+}
+section[aria-label="Intel Sustainability Timeline"] .col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  section[aria-label="Intel Sustainability Timeline"] .row {
+    gap: 1.5rem 0;
+  }
+  section[aria-label="Intel Sustainability Timeline"] .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767.98px) {
+  section[aria-label="Intel Sustainability Timeline"] .row {
+    gap: 1rem 0;
+  }
+  section[aria-label="Intel Sustainability Timeline"] .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Card improvements for stacking and spacing */
+section[aria-label="Intel Sustainability Timeline"] .card {
+  margin-bottom: 0;
+  min-height: 340px;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #0071c522, 0 1.5px 8px #00c6fb11;
+  background: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+section[aria-label="Intel Sustainability Timeline"] .card:hover,
+section[aria-label="Intel Sustainability Timeline"] .card:focus-within {
+  box-shadow: 0 8px 32px #0071c544, 0 4px 24px #00aaff33;
+  transform: translateY(-4px) scale(1.03);
+  z-index: 2;
+}
+
+/* Icon size and spacing */
+section[aria-label="Intel Sustainability Timeline"] .display-4 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Card title and text */
+section[aria-label="Intel Sustainability Timeline"] .card-title {
+  color: #0071c5;
+  font-size: 1.15em;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+section[aria-label="Intel Sustainability Timeline"] .card-text {
+  color: #1a355e;
+  font-size: 1.08em;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 1.2em;
+}
+
+/* Remove horizontal scroll from .grid-layout.horizontal-scroll if present */
+.grid-layout.horizontal-scroll {
+  display: block !important;
+  overflow-x: visible !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  scrollbar-width: none !important;
+}
+
+/* Remove min-width/max-width from cards in timeline grid */
+.grid-layout.horizontal-scroll > .glass-card,
+.grid-layout.horizontal-scroll > .card-hover-hide {
+  min-width: unset !important;
+  max-width: unset !important;
+  width: 100% !important;
+  margin: 0 0 2rem 0 !important;
+}
+
+/* General improvements for stacking and spacing */
+@media (max-width: 600px) {
+  .container, main, section, header, footer {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .card {
+    padding: 1rem 0.5rem !important;
+  }
+}
+
 /* --- RTL Support --- */
 body[dir="rtl"] .glass-card,
 body[dir="rtl"] .card-hover-hide,
