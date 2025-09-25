@@ -43,6 +43,7 @@ function updateAllContent(lang) {
   // Navbar language label
   const langLabel = document.querySelector('.lang-label');
   if (langLabel) langLabel.textContent = t(lang, 'langLabel');
+  // Dark mode label
   if (darkModeLabel) darkModeLabel.textContent = t(lang, 'darkModeLabel') || 'Dark Mode';
 
   // Timeline swipe hint

@@ -73,11 +73,11 @@ body.dark-mode .form-check-label {
   color: #e3e8f7 !important;
 }
 
-/* Enhanced RTL support for all content */
+/* --- RTL and Layout Base --- */
 body {
   direction: rtl !important;
   text-align: right;
-  background: #e6e9ef; /* darken background in light mode */
+  background: #e6e9ef;
   color: #222;
   font-family: 'Intel Clear', 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -107,7 +107,7 @@ header, section, .container, .timeline, .modal-content {
   text-align: center;
 }
 
-/* Modern toggle switch styling */
+/* --- Modern Toggle Switch --- */
 .form-switch .form-check-input {
   width: 3em;
   height: 1.5em;
@@ -142,8 +142,6 @@ header, section, .container, .timeline, .modal-content {
   outline: 2px solid #0071c5;
   box-shadow: 0 0 0 2px #7ecbff;
 }
-
-/* RTL fixes for switch */
 .form-switch {
   padding-left: 0;
   padding-right: 2.5em;
@@ -153,385 +151,6 @@ header, section, .container, .timeline, .modal-content {
   float: right;
   margin-left: 0.5em;
   margin-right: 0;
-}
-
-/* Enable RTL for all horizontal scrolling sections */
-.grid-layout.horizontal-scroll {
-  direction: rtl;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(320px, 1fr);
-  gap: 32px;
-  overflow-x: auto;
-  overflow-y: visible;
-  padding: 32px 10vw;
-  box-sizing: border-box;
-  max-width: 1400px;
-  margin: 0 auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding-inline: 32px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: auto;
-  scrollbar-color: #4169e1 #e3e8f7;
-}
-.grid-layout.horizontal-scroll > .glass-card {
-  scroll-snap-align: center;
-  min-width: 320px;
-  max-width: 340px;
-}
-/* Improve text readability on cards */
-.glass-card h2, .glass-card h3, .card-hover-hide h2, .card-hover-hide h3 {
-  color: #0f2c59;
-  font-weight: 700;
-  font-size: 1.25em;
-  margin-bottom: 0.5em;
-  letter-spacing: 0.02em;
-}
-.glass-card .card-desc, .card-hover-hide .card-desc, .glass-card .card-details, .card-hover-hide .card-details {
-  color: #1a355e;
-  font-size: 1.08em;
-  line-height: 1.7;
-  font-weight: 400;
-  margin-bottom: 0.5em;
-  letter-spacing: 0.01em;
-}
-.glass-card .card-info, .card-hover-hide .card-info {
-  background: linear-gradient(120deg, #f8fbff 0%, #e6f7ff 100%);
-  color: #0f2c59;
-}
-section.container .card-title {
-  color: #0f2c59;
-  font-size: 1.3em;
-  font-weight: 700;
-  margin-bottom: 0.7em;
-}
-section.container .card-text {
-  color: #1a355e;
-  font-size: 1.08em;
-  line-height: 1.7;
-  font-weight: 400;
-  margin-bottom: 1.2em;
-}
-/* Timeline card proportion and padding fix */
-.glass-card, .card-hover-hide {
-  min-width: 320px;
-  max-width: 360px;
-  min-height: 520px; /* Increased for more content space */
-  padding: 1.5em 1.2em 1.2em 1.2em;
-  margin: 0 1.2em 2em 0;
-  background: linear-gradient(120deg, #e6f7ff 0%, #f0f8ff 100%);
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,113,197,0.14);
-  overflow: visible; /* Allow overlay to expand outside card if needed */
-  transition: box-shadow 0.2s, transform 0.2s;
-  border: 2px solid #0071c5;
-  cursor: pointer;
-  font-family: 'Intel Clear', 'Segoe UI', Arial, sans-serif;
-}
-
-/* Card info overlay: always readable, no scroll needed */
-.card-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100%;
-  height: auto !important;
-  max-height: none !important;
-  overflow-y: visible !important;
-  white-space: normal;
-  background: linear-gradient(120deg, #e6f7ff 0%, #f0f8ff 100%);
-  color: #0f2c59;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,113,197,0.18);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-  padding: 1.2em 1em 1em 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  border: 2px solid #0071c5;
-  font-family: 'Intel Clear', 'Segoe UI', Arial, sans-serif;
-  scrollbar-width: thin;
-  scrollbar-color: #0071c5 #e6f7ff;
-  box-shadow: 0 8px 32px #0071c5aa, 0 4px 24px #00aaff33;
-  backdrop-filter: blur(4px);
-}
-
-/* Show overlay on hover/focus */
-.glass-card:hover .card-info,
-.glass-card:focus .card-info,
-.card-hover-hide:hover .card-info,
-.card-hover-hide:focus-within .card-info {
-  opacity: 1;
-  pointer-events: auto;
-  box-shadow: 0 8px 32px rgba(0,113,197,0.22);
-}
-
-/* Intel Official Card Image Formatting */
-.card-img-wrap {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  border-radius: 16px 16px 0 0;
-  background: linear-gradient(90deg, #e6f7ff 0%, #f0f8ff 100%);
-}
-.card-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px 16px 0 0;
-  border-bottom: 2px solid #00aaff;
-}
-.card-hover-hide:hover .card-info,
-.card-hover-hide:focus-within .card-info {
-  opacity: 1;
-  pointer-events: auto;
-}
-.card-hover-hide {
-  position: relative;
-  overflow: hidden;
-  min-width: 250px;
-  min-height: 320px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  border-radius: 1em;
-  background: rgba(255,255,255,0.6);
-  margin: 0 1em 1em 0;
-}
-
-@media (max-width: 900px) {
-  .glass-card img {
-    max-width: 90vw;
-    aspect-ratio: 4/3;
-  }
-}
-
-@media (max-width: 600px) {
-  .glass-card img {
-    max-width: 98vw;
-    aspect-ratio: 4/3;
-  }
-}
-/* === Swipe Hint Styling === */
-/* Intel Official Card Container Styling */
-.glass-card, .card-hover-hide {
-  position: relative;
-  min-width: 260px;
-  max-width: 320px;
-  margin: 0 1.2em 2em 0;
-  background: linear-gradient(120deg, #e6f7ff 0%, #f0f8ff 100%);
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,113,197,0.14);
-  overflow: hidden;
-  transition: box-shadow 0.2s, transform 0.2s;
-  border: 2px solid #0071c5;
-  cursor: pointer;
-  font-family: 'Intel Clear', 'Segoe UI', Arial, sans-serif;
-}
-.grid-layout.horizontal-scroll::-webkit-scrollbar-thumb {
-  background: #4169e1;
-  border-radius: 8px;
-}
-.grid-layout.horizontal-scroll > .glass-card {
-  scroll-snap-align: center;
-  min-width: 320px;
-  max-width: 340px;
-}
-.grid-layout.horizontal-scroll::-webkit-scrollbar {
-  height: 10px;
-  background: #e3e8f7;
-}
-.grid-layout.horizontal-scroll::-webkit-scrollbar-thumb {
-  background: #4169e1;
-  border-radius: 6px;
-}
-
-@media (max-width: 900px) {
-  .grid-layout.horizontal-scroll {
-    grid-auto-columns: 90vw;
-    gap: 20px;
-    padding: 16px 2vw;
-    max-width: 100vw;
-    scroll-padding-inline: 0;
-  }
-  .grid-layout.horizontal-scroll > .glass-card {
-    min-width: 0;
-    max-width: 100vw;
-  }
-}
-
-@media (max-width: 600px) {
-  .grid-layout.horizontal-scroll {
-    grid-auto-columns: 98vw;
-    gap: 8px;
-    padding: 4px 0.5vw;
-    max-width: 100vw;
-  }
-  .grid-layout.horizontal-scroll > .glass-card {
-    min-width: 0;
-    max-width: 99vw;
-    padding: 8px 2px;
-    font-size: 0.98em;
-    margin-bottom: 10px;
-  }
-}
-/* === INTEL-THEMED BOOTSTRAP CARD SECTION === */
-section.container .card {
-  background: rgba(255,255,255,0.95);
-  border-radius: 18px;
-  box-shadow: 0 2px 16px #4169e122, 0 1.5px 8px #00c6fb11;
-  border: none;
-  transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem 1rem 1.5rem 1rem;
-  min-height: 340px;
-}
-
-section.container .card .display-4 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-section.container .card-title {
-  color: #0071c5;
-  font-size: 1.25em;
-  font-weight: 700;
-  margin-bottom: 0.7em;
-}
-
-section.container .card-text {
-  color: #1a355e;
-  font-size: 1.08em;
-  line-height: 1.7;
-  font-weight: 400;
-  margin-bottom: 1.2em;
-}
-
-section.container .btn-primary {
-  background: linear-gradient(90deg, #4169e1 0%, #00c6fb 100%);
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 24px;
-  padding: 10px 24px;
-  box-shadow: 0 2px 12px #4169e122;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-section.container .btn-primary:hover,
-section.container .btn-primary:focus {
-  background: linear-gradient(90deg, #00c6fb 0%, #4169e1 100%);
-  box-shadow: 0 8px 24px #00c6fb55;
-  outline: 2px solid #47f0ff;
-}
-
-/* Accessible form improvements */
-form#subscribe-form input[type="email"] {
-  font-size: 1.1em;
-  padding: 0.75em 1em;
-  border-radius: 8px;
-  border: 1.5px solid #0071c5;
-  margin-bottom: 0.5em;
-}
-form#subscribe-form input[type="email"]:focus {
-  border: 2px solid #00aaff;
-  outline: none;
-}
-form#subscribe-form .form-label {
-  font-weight: 600;
-  color: #0071c5;
-}
-form#subscribe-form .form-text {
-  color: #1a355e;
-  font-size: 0.98em;
-}
-
-/* Sticky Intel Navbar */
-.intel-navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 8px #0071c511;
-  z-index: 100;
-  padding: 0.25rem 0;
-}
-.intel-navbar-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2vw;
-}
-.intel-logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  margin-right: 1.5rem;
-}
-.intel-logo-svg {
-  height: 36px;
-  width: auto;
-  display: block;
-}
-.lang-toggle-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  font-size: 1em;
-}
-.lang-label {
-  color: #0071c5;
-  font-weight: 600;
-  margin-left: 0.5em;
-}
-.lang-select {
-  border-radius: 20px;
-  border: 1px solid #0071c5;
-  padding: 0.25em 1em;
-  font-size: 1em;
-  color: #0071c5;
-  background: #f8fbff;
-  outline: none;
-  transition: border 0.2s;
-}
-.lang-select:focus {
-  border: 2px solid #00aaff;
-}
-
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(135deg, #0071c5 0%, #005fa3 100%);
-  color: #fff;
-  padding-top: 3.5rem;
-  padding-bottom: 2.5rem;
-  margin-bottom: 2rem;
-  border-bottom: none;
-  text-align: center;
-}
-.hero-section h1,
-.hero-section .display-4 {
-  font-family: 'Intel Clear', 'Segoe UI', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #fff !important;
-  letter-spacing: 0.01em;
-}
-.hero-section p,
-.hero-section .lead {
-  color: #e3e8f7 !important;
-  font-size: 1.25rem;
-  margin-bottom: 0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* --- Timeline Cards Section --- */
@@ -560,6 +179,11 @@ form#subscribe-form .form-text {
 .grid-layout.horizontal-scroll::-webkit-scrollbar-thumb {
   background: #0071c5;
   border-radius: 6px;
+}
+.grid-layout.horizontal-scroll > .glass-card {
+  scroll-snap-align: center;
+  min-width: 320px;
+  max-width: 340px;
 }
 
 /* --- Timeline Card Style --- */
