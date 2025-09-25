@@ -492,44 +492,6 @@ section[aria-label="Intel Sustainability Timeline"] .col {
   }
 }
 
-/* Card improvements for stacking and spacing */
-section[aria-label="Intel Sustainability Timeline"] .card {
-  margin-bottom: 0;
-  min-height: 340px;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px #0071c522, 0 1.5px 8px #00c6fb11;
-  background: #fff;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-section[aria-label="Intel Sustainability Timeline"] .card:hover,
-section[aria-label="Intel Sustainability Timeline"] .card:focus-within {
-  box-shadow: 0 8px 32px #0071c544, 0 4px 24px #00aaff33;
-  transform: translateY(-4px) scale(1.03);
-  z-index: 2;
-}
-
-/* Icon size and spacing */
-section[aria-label="Intel Sustainability Timeline"] .display-4 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-/* Card title and text */
-section[aria-label="Intel Sustainability Timeline"] .card-title {
-  color: #0071c5;
-  font-size: 1.15em;
-  font-weight: 700;
-  margin-bottom: 0.7em;
-}
-section[aria-label="Intel Sustainability Timeline"] .card-text {
-  color: #1a355e;
-  font-size: 1.08em;
-  line-height: 1.7;
-  font-weight: 400;
-  margin-bottom: 1.2em;
-}
-
 /* Remove horizontal scroll from .grid-layout.horizontal-scroll if present */
 .grid-layout.horizontal-scroll {
   display: block !important;
