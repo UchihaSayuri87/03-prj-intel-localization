@@ -75,9 +75,8 @@ body.dark-mode .form-check-label {
 
 /* --- RTL and Layout Base --- */
 body {
-  direction: rtl !important;
   text-align: right;
-  background: #e6e9ef;
+  background: #b3d8fd; /* ciel blue */
   color: #222;
   font-family: 'Intel Clear', 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -247,6 +246,44 @@ header, section, .container, .timeline, .modal-content {
   border-bottom: 2px solid #0071c5;
 }
 
+/* Fix broken images: show a placeholder background if image fails to load */
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  background: #e3e8f7 url('data:image/svg+xml;utf8,<svg width="120" height="90" xmlns="http://www.w3.org/2000/svg"><rect fill=\'%23e3e8f7\' width=\"100%\" height=\"100%\"/><text x=\"50%\" y=\"50%\" font-size=\"14\" fill=\"%23777\" text-anchor=\"middle\" alignment-baseline=\"middle\">No Image</text></svg>') center center no-repeat;
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .card-img-top {
+    height: 140px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card-img-top {
+    height: 120px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card-img-top {
+    height: 90px;
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+}
+
+/* Optional: visually indicate broken images with a border */
+.card-img-top:empty,
+.card-img-top[src=""],
+.card-img-top:not([src]),
+.card-img-top[src^="broken"] {
+  border: 2px dashed #b3d8fd;
+  background-color: #e3e8f7;
+}
+
 /* Card Info Overlay (Reveal on Hover) */
 .card-info {
   background: #fff;
@@ -414,21 +451,278 @@ form#subscribe-form .btn-primary:focus {
   text-decoration: underline;
 }
 
+/* --- Enhanced Ciel Blue Gradient Background --- */
+body {
+  background: linear-gradient(135deg, #2196f3 0%, #b3d8fd 100%);
+}
+
+/* --- Intel Logo Card: Centered, Large, Flat --- */
+.intel-header-logo-card {
+  background: #0071c5;
+  border-radius: 2.5rem;
+  min-height: 180px;
+  box-shadow: 0 4px 24px #0071c533;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 2.5rem auto;
+  max-width: 540px;
+  width: 100%;
+  border: none;
+}
+.intel-header-logo {
+  height: 80px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .intel-header-logo-card {
+    min-height: 100px;
+    border-radius: 1.2rem;
+    margin: 1rem auto 1.5rem auto;
+    max-width: 98vw;
+  }
+  .intel-header-logo {
+    height: 48px;
+  }
+}
+
+/* --- Hero Section: Centered, White, Large Text --- */
+.hero-section {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px #0071c522;
+  margin-bottom: 2.5rem;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+  text-align: center;
+}
+.hero-section h1,
+.hero-section .display-4 {
+  font-family: 'Intel Clear', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #0071c5;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+.hero-section p,
+.hero-section .lead {
+  color: #222;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Timeline Cards: Flat, White, Shadow, RTL Support --- */
+section[aria-label="Intel Sustainability Timeline"] {
+  background: transparent;
+  box-shadow: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+section[aria-label="Intel Sustainability Timeline"] .row {
+  margin: 0;
+  gap: 2rem 0;
+}
+section[aria-label="Intel Sustainability Timeline"] .col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+section[aria-label="Intel Sustainability Timeline"] .card {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px #0071c522;
+  border: none;
+  min-height: 340px;
+  padding: 0;
+  text-align: right;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+section[aria-label="Intel Sustainability Timeline"] .card:hover,
+section[aria-label="Intel Sustainability Timeline"] .card:focus-within {
+  box-shadow: 0 8px 32px #0071c544;
+  transform: translateY(-4px) scale(1.03);
+  z-index: 2;
+}
+.card-img-top {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 1.2rem 1.2rem 0 0;
+  background: #e3e8f7;
+  display: block;
+}
+@media (max-width: 991.98px) {
+  .card-img-top {
+    height: 110px;
+  }
+}
+@media (max-width: 767.98px) {
+  .card-img-top {
+    height: 90px;
+  }
+}
+.card-title {
+  color: #0071c5;
+  font-size: 1.15em;
+  font-weight: 700;
+  margin: 1.2em 0 0.5em 0;
+  text-align: right;
+}
+.card-text {
+  color: #1a355e;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  text-align: right;
+}
+
+/* --- Three-Column Section with Icons: Flat, White, RTL --- */
+section.container[aria-label] {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px #0071c522;
+  margin-bottom: 2.5rem;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+}
+section.container .card {
+  background: #f8fbff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px #4169e122;
+  border: none;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  min-height: 340px;
+  text-align: center;
+}
+section.container .display-4 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+section.container .card-title {
+  color: #0071c5;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+section.container .card-text {
+  color: #1a355e;
+  font-size: 1.08em;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 1.2em;
+}
+section.container .btn-primary {
+  background: #fff;
+  color: #0071c5;
+  border: 1.5px solid #0071c5;
+  font-weight: 600;
+  border-radius: 24px;
+  padding: 10px 24px;
+  box-shadow: 0 2px 12px #4169e122;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+section.container .btn-primary:hover,
+section.container .btn-primary:focus {
+  background: #0071c5;
+  color: #fff;
+  border: 1.5px solid #0071c5;
+  box-shadow: 0 8px 24px #00c6fb55;
+  outline: 2px solid #47f0ff;
+}
+
+/* --- Newsletter Section: Flat, White --- */
+section.py-5.bg-white {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px #0071c522;
+  margin-bottom: 2.5rem;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+}
+form#subscribe-form {
+  background: #f8fbff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #0071c511;
+  padding: 2rem 1.5rem;
+}
+form#subscribe-form input[type="email"] {
+  font-size: 1.1em;
+  padding: 0.75em 1em;
+  border-radius: 8px;
+  border: 1.5px solid #0071c5;
+  margin-bottom: 0.5em;
+}
+form#subscribe-form input[type="email"]:focus {
+  border: 2px solid #00aaff;
+  outline: none;
+}
+form#subscribe-form .form-label {
+  font-weight: 600;
+  color: #0071c5;
+}
+form#subscribe-form .form-text {
+  color: #1a355e;
+  font-size: 0.98em;
+}
+form#subscribe-form .btn-primary {
+  background: #0071c5;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 24px;
+  padding: 10px 24px;
+  border: none;
+  box-shadow: 0 2px 12px #4169e122;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+form#subscribe-form .btn-primary:hover,
+form#subscribe-form .btn-primary:focus {
+  background: #005fa3;
+  box-shadow: 0 8px 24px #00c6fb55;
+  outline: 2px solid #47f0ff;
+}
+
+/* --- Footer: Flat, White, Small Text --- */
+.intel-footer {
+  background: #fff;
+  color: #222;
+  border-top: 3px solid #0071c5;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  font-size: 0.98em;
+}
+.intel-footer a {
+  color: #0071c5;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.intel-footer a:hover,
+.intel-footer a:focus {
+  color: #00aaff;
+  text-decoration: underline;
+}
+
 /* --- Responsive --- */
 @media (max-width: 900px) {
-  .grid-layout.horizontal-scroll {
-    gap: 1rem;
-    padding: 0 0.5vw 1.5rem 0.5vw;
+  .intel-header-logo-card {
+    max-width: 98vw;
   }
-  .glass-card, .card-hover-hide {
-    min-width: 90vw;
-    max-width: 95vw;
+  section[aria-label="Intel Sustainability Timeline"] .col {
+    margin-bottom: 1.2rem;
   }
 }
 @media (max-width: 600px) {
   .hero-section h1,
   .hero-section .display-4 {
     font-size: 1.5rem;
+  }
+  .intel-header-logo-card {
+    min-height: 80px;
+    border-radius: 1rem;
   }
   .glass-card, .card-hover-hide {
     min-width: 98vw;
@@ -521,35 +815,19 @@ section[aria-label="Intel Sustainability Timeline"] .col {
   }
 }
 
-/* --- RTL Support --- */
-body[dir="rtl"] .glass-card,
-body[dir="rtl"] .card-hover-hide,
-body[dir="rtl"] .card-info,
-body[dir="rtl"] .card-desc,
-body[dir="rtl"] .card-details,
-body[dir="rtl"] .card-title,
-body[dir="rtl"] .card-text {
-  text-align: right !important;
-  direction: rtl !important;
+/* Responsive fix for Intel logo card */
+.intel-header-logo {
+  max-width: 100%;
+  height: 90px;
+  width: auto;
+  display: block;
 }
-body[dir="rtl"] .card-year {
-  left: auto;
-  right: 1rem;
-}
-body[dir="rtl"] .intel-navbar-content {
-  flex-direction: row-reverse;
-}
-body[dir="rtl"] .lang-toggle-bar {
-  flex-direction: row-reverse;
-}
-body[dir="rtl"] .intel-logo-link {
-  margin-left: 1.5rem;
-  margin-right: 0;
-}
-body[dir="rtl"] .form-switch {
-  direction: rtl;
-}
-body[dir="rtl"] .form-check-label {
-  margin-left: 0.5em;
-  margin-right: 0;
+@media (max-width: 600px) {
+  .intel-header-logo {
+    height: 56px;
+  }
+  .container .card.border-0 {
+    min-height: 90px !important;
+    padding: 0.5rem 0 !important;
+  }
 }
