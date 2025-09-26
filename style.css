@@ -859,21 +859,14 @@ section[aria-label="Intel Sustainability Timeline"] .col {
   }
 }
 
-/* Ensure 3x3 grid on desktop, stack on small screens */
+/* Make cards 3 by 3 on desktop, stack on small screens */
 .row.row-cols-1.row-cols-md-3.g-4 > .col {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
-@media (min-width: 768px) {
-  .row.row-cols-1.row-cols-md-3.g-4 > .col {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-  }
-}
-
-/* Overlay text on image, reveal only on hover/focus */
+/* Overlay text on image, hide until hover/focus */
 .card-img-overlay-container {
   position: relative;
   width: 100%;
@@ -911,27 +904,7 @@ section[aria-label="Intel Sustainability Timeline"] .col {
   pointer-events: auto;
 }
 
-/* Hide card-info by default */
-.glass-card .card-info,
-.card-hover-hide .card-info {
-  opacity: 0;
-  pointer-events: none;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s, max-height 0.3s;
-}
-.glass-card:hover .card-info,
-.glass-card:focus-within .card-info,
-.card-hover-hide:hover .card-info,
-.card-hover-hide:focus-within .card-info {
-  opacity: 1;
-  pointer-events: auto;
-  max-height: 400px;
-  overflow: visible;
-  transition: opacity 0.3s, max-height 0.3s;
-}
-
-/* Remove default card body for overlay cards */
+/* Remove default card body padding for overlay cards */
 .glass-card.card-hover-hide .card-body,
 .card-hover-hide .card-body {
   display: none;
