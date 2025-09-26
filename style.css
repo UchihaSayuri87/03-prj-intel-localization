@@ -308,6 +308,33 @@ header, section, .container, .timeline, .modal-content {
   box-shadow: 0 8px 32px #0071c544, 0 4px 24px #00aaff33;
 }
 
+/* Reveal text only on hover/focus for glass cards */
+.glass-card .card-info,
+.card-hover-hide .card-info {
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s, max-height 0.3s;
+}
+
+.glass-card:hover .card-info,
+.glass-card:focus-within .card-info,
+.card-hover-hide:hover .card-info,
+.card-hover-hide:focus-within .card-info {
+  opacity: 1;
+  pointer-events: auto;
+  max-height: 400px;
+  overflow: visible;
+  transition: opacity 0.3s, max-height 0.3s;
+}
+
+/* Optionally hide headings and text in card-info from screen readers unless focused */
+.glass-card .card-info[aria-live="polite"]:not(:focus):not(:hover),
+.card-hover-hide .card-info[aria-live="polite"]:not(:focus):not(:hover) {
+  visibility: hidden;
+}
+
 /* Card Title & Desc */
 .glass-card h3, .card-hover-hide h3 {
   font-size: 1.15em;
@@ -829,5 +856,106 @@ section[aria-label="Intel Sustainability Timeline"] .col {
   .container .card.border-0 {
     min-height: 90px !important;
     padding: 0.5rem 0 !important;
+  }
+}
+
+/* Ensure 3x3 grid on desktop, stack on small screens */
+.row.row-cols-1.row-cols-md-3.g-4 > .col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .row.row-cols-1.row-cols-md-3.g-4 > .col {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+/* Overlay text on image, reveal only on hover/focus */
+.card-img-overlay-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1.2rem 1.2rem 0 0;
+  background: #e3e8f7;
+  display: block;
+}
+.card-info.card-img-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.97);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border-radius: 1.2rem 1.2rem 0 0;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.glass-card:hover .card-info.card-img-overlay,
+.glass-card:focus-within .card-info.card-img-overlay,
+.card-hover-hide:hover .card-info.card-img-overlay,
+.card-hover-hide:focus-within .card-info.card-img-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hide card-info by default */
+.glass-card .card-info,
+.card-hover-hide .card-info {
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s, max-height 0.3s;
+}
+.glass-card:hover .card-info,
+.glass-card:focus-within .card-info,
+.card-hover-hide:hover .card-info,
+.card-hover-hide:focus-within .card-info {
+  opacity: 1;
+  pointer-events: auto;
+  max-height: 400px;
+  overflow: visible;
+  transition: opacity 0.3s, max-height 0.3s;
+}
+
+/* Remove default card body for overlay cards */
+.glass-card.card-hover-hide .card-body,
+.card-hover-hide .card-body {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .row.row-cols-1.row-cols-md-3.g-4 > .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .card-img-top {
+    height: 140px;
+  }
+}
+@media (max-width: 767.98px) {
+  .row.row-cols-1.row-cols-md-3.g-4 > .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .card-img-top {
+    height: 90px;
+  }
+  .card-info.card-img-overlay {
+    padding: 1rem 0.5rem;
   }
 }
