@@ -1,21 +1,21 @@
-/* === Dark Mode Styles === */
+/* === Enhanced Dark Mode Styles === */
 body.dark-mode {
+  background: #10131a !important;
+  color: #e3e8f7 !important;
+}
+
+body.dark-mode .intel-header-logo-card {
+  background: #14213d !important;
+  box-shadow: 0 4px 32px #0071c577;
+}
+
+body.dark-mode .intel-navbar,
+body.dark-mode .intel-navbar-content {
   background: #181c24 !important;
   color: #e3e8f7 !important;
+  border-bottom: 1.5px solid #222a38 !important;
 }
-body.dark-mode .intel-header-banner,
-body.dark-mode .intel-navbar,
-body.dark-mode .container,
-body.dark-mode .modal-content,
-body.dark-mode .glass-card,
-body.dark-mode .card-hover-hide,
-body.dark-mode .card-info {
-  background: linear-gradient(120deg, #232a36 0%, #1a202b 100%) !important;
-  color: #e3e8f7 !important;
-}
-body.dark-mode .glass-card h2,
-body.dark-mode .glass-card h3,
-body.dark-mode .card-hover-hide h2,
+
 body.dark-mode .card-hover-hide h3,
 body.dark-mode section.container .card-title {
   color: #7ecbff !important;
@@ -309,30 +309,15 @@ header, section, .container, .timeline, .modal-content {
 }
 
 /* Reveal text only on hover/focus for glass cards */
+/* REMOVE the hiding logic so text is always visible */
 .glass-card .card-info,
 .card-hover-hide .card-info {
-  opacity: 0;
-  pointer-events: none;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s, max-height 0.3s;
-}
-
-.glass-card:hover .card-info,
-.glass-card:focus-within .card-info,
-.card-hover-hide:hover .card-info,
-.card-hover-hide:focus-within .card-info {
-  opacity: 1;
-  pointer-events: auto;
-  max-height: 400px;
-  overflow: visible;
-  transition: opacity 0.3s, max-height 0.3s;
-}
-
-/* Optionally hide headings and text in card-info from screen readers unless focused */
-.glass-card .card-info[aria-live="polite"]:not(:focus):not(:hover),
-.card-hover-hide .card-info[aria-live="polite"]:not(:focus):not(:hover) {
-  visibility: hidden;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  transition: none !important;
+  visibility: visible !important;
 }
 
 /* Card Title & Desc */
@@ -902,6 +887,24 @@ section[aria-label="Intel Sustainability Timeline"] .col {
 .card-hover-hide:focus-within .card-info.card-img-overlay {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* Improve card overlay text visibility */
+.card-info.card-img-overlay {
+  background: rgba(0, 113, 197, 0.92); /* Intel blue, high contrast */
+  color: #fff !important;
+}
+
+.card-info.card-img-overlay .card-title,
+.card-info.card-img-overlay .card-text,
+.card-info.card-img-overlay .display-4,
+.card-info.card-img-overlay h3 {
+  color: #fff !important;
+  text-shadow: 0 2px 8px #00336688;
+}
+
+.card-info.card-img-overlay .display-4 i {
+  color: #7ecbff !important;
 }
 
 /* Remove default card body padding for overlay cards */
